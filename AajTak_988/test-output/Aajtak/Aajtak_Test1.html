@@ -1,0 +1,646 @@
+<html>
+<head>
+<title>TestNG:  Aajtak_Test1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Aajtak_Test1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>28/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 12 13:17:17 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1390 seconds (1390598 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_008.AT_Newslist_008()'><b>AT_Newslist_008</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_008<br>Test method: Description: Verify that user is able to view the offlined story is available in 'Downloaded Content' tab</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: in.AajTak.headlines:id/story_desc}) (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.aajtak.android.init.BaseUtil.waitTillElementPresent(BaseUtil.java:362)
+	at com.aajtak.android.NewsList.TC_AT_NewsList_008.AT_Newslist_008(TC_AT_NewsList_008.java:64)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: in.AajTak.headlines:id/story_desc})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@79b18230 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: in.AajTak.headlines:id/story_desc})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SUDHAKAR&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 36 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace37528429", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace37528429'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: in.AajTak.headlines:id/story_desc}) (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.aajtak.android.init.BaseUtil.waitTillElementPresent(BaseUtil.java:362)
+	at com.aajtak.android.NewsList.TC_AT_NewsList_008.AT_Newslist_008(TC_AT_NewsList_008.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: in.AajTak.headlines:id/story_desc})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@79b18230 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: in.AajTak.headlines:id/story_desc})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SUDHAKAR&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 36 more
+</pre></div></td>
+<td>94</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_008@59e5ddf</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_010.AT_Newslist_010()'><b>AT_Newslist_010</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_010<br>Test method: Description: Verify that user is able to share story by tapping on the 'Share' icon available at end of any story</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: in.AajTak.headlines:id/tvCancel}) (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.aajtak.android.init.BaseUtil.waitTillElementPresent(BaseUtil.java:362)
+	at com.aajtak.android.NewsList.TC_AT_NewsList_010.AT_Newslist_010(TC_AT_NewsList_010.java:59)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: in.AajTak.headlines:id/tvCancel})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@782fd504 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: in.AajTak.headlines:id/tvCancel})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SUDHAKAR&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 36 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1484960258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1484960258'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: in.AajTak.headlines:id/tvCancel}) (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.aajtak.android.init.BaseUtil.waitTillElementPresent(BaseUtil.java:362)
+	at com.aajtak.android.NewsList.TC_AT_NewsList_010.AT_Newslist_010(TC_AT_NewsList_010.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: in.AajTak.headlines:id/tvCancel})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@782fd504 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 34 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: in.AajTak.headlines:id/tvCancel})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SUDHAKAR&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 36 more
+</pre></div></td>
+<td>51</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_010@e320068</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_014.AT_Newslist_014()'><b>AT_Newslist_014</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_014<br>Test method: Description: Verify that each story under Newslist screen is showing up the uploaded time</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: in.AajTak.headlines:id/btn_get_started}) (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.aajtak.android.init.BaseUtil.waitTillElementPresent(BaseUtil.java:362)
+	at com.aajtak.android.init.Aajtak_app_Util.compelteOnboarding(Aajtak_app_Util.java:329)
+	at com.aajtak.android.NewsList.TC_AT_NewsList_014.AT_Newslist_014(TC_AT_NewsList_014.java:29)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: in.AajTak.headlines:id/btn_get_started})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@40fe8fd5 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 35 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: in.AajTak.headlines:id/btn_get_started})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SUDHAKAR&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 37 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1413154615", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1413154615'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.id: in.AajTak.headlines:id/btn_get_started}) (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.aajtak.android.init.BaseUtil.waitTillElementPresent(BaseUtil.java:362)
+	at com.aajtak.android.init.Aajtak_app_Util.compelteOnboarding(Aajtak_app_Util.java:329)
+	at com.aajtak.android.NewsList.TC_AT_NewsList_014.AT_Newslist_014(TC_AT_NewsList_014.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.id: in.AajTak.headlines:id/btn_get_started})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@40fe8fd5 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 35 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: in.AajTak.headlines:id/btn_get_started})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TYSS-SUDHAKAR&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 37 more
+</pre></div></td>
+<td>35</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_014@6ee52dcd</td></tr>
+<tr>
+<td title='com.aajtak.android.Onboarding.TC_AT_Onboarding_003.AT_Onboarding_003()'><b>AT_Onboarding_003</b><br>Test class: com.aajtak.android.Onboarding.TC_AT_Onboarding_003<br>Test method: Description: Verify that the user get navigated to next screen by swiping horizontally</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.aajtak.android.Onboarding.TC_AT_Onboarding_003.AT_Onboarding_003(TC_AT_Onboarding_003.java:39)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace955443582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace955443582'><pre>java.lang.NullPointerException
+	at com.aajtak.android.Onboarding.TC_AT_Onboarding_003.AT_Onboarding_003(TC_AT_Onboarding_003.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>26</td>
+<td>com.aajtak.android.Onboarding.TC_AT_Onboarding_003@15d0c81b</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009.AT_StoryDetail_009()'><b>AT_StoryDetail_009</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009<br>Test method: Description: Verify that user is able to view the bookmarked story is available in 'Bookmark' tab</td>
+<td><div><pre>java.lang.AssertionError: expected [कश्मीरा के कामवाली ने पैर पकड़कर खींचे, चीखती रहीं एक्ट्रेस] but found [Kashmera Shah के कामवाली बाई ने खींचे पैर, चीखती रही एक्ट्रेस, पत्नी का बुरा हाल देख Krushna Abhishek बोले- मैंने ही पैसे दिए ]
+	at com.aajtak.android.init.Aajtak_app_Util.verifyStoryTitles(Aajtak_app_Util.java:47)
+	at com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009.AT_StoryDetail_009(TC_AT_StoryDetail_009.java:89)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1717136460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1717136460'><pre>java.lang.AssertionError: expected [कश्मीरा के कामवाली ने पैर पकड़कर खींचे, चीखती रहीं एक्ट्रेस] but found [Kashmera Shah के कामवाली बाई ने खींचे पैर, चीखती रही एक्ट्रेस, पत्नी का बुरा हाल देख Krushna Abhishek बोले- मैंने ही पैसे दिए ]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.aajtak.android.init.Aajtak_app_Util.verifyStoryTitles(Aajtak_app_Util.java:47)
+	at com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009.AT_StoryDetail_009(TC_AT_StoryDetail_009.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>70</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009@11438d26</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_019.AT_DailyCapsule_019()'><b>AT_DailyCapsule_019</b><br>Test class: com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_019<br>Test method: Description: Verify that user is able to swipe through newspresso card by swiping up </td>
+<td></td>
+<td>23</td>
+<td>com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_019@33f88ab</td></tr>
+<tr>
+<td title='com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_020.AT_DailyCapsule_020()'><b>AT_DailyCapsule_020</b><br>Test class: com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_020<br>Test method: Description: Verify that user is able to swipe through newspresso card by swiping down</td>
+<td></td>
+<td>22</td>
+<td>com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_020@27a8c74e</td></tr>
+<tr>
+<td title='com.aajtak.android.HomeScreen.TC_AT_HomeScreen_001.AT_Home_001()'><b>AT_Home_001</b><br>Test class: com.aajtak.android.HomeScreen.TC_AT_HomeScreen_001<br>Test method: Description: Verify once user launch the app,'Home' tab is selected by default</td>
+<td></td>
+<td>12</td>
+<td>com.aajtak.android.HomeScreen.TC_AT_HomeScreen_001@6acdbdf5</td></tr>
+<tr>
+<td title='com.aajtak.android.HomeScreen.TC_AT_HomeScreen_002.AT_Home_002()'><b>AT_Home_002</b><br>Test class: com.aajtak.android.HomeScreen.TC_AT_HomeScreen_002<br>Test method: Description: Verify that 'Badi Khabarae' is the first section under 'Home' tab</td>
+<td></td>
+<td>22</td>
+<td>com.aajtak.android.HomeScreen.TC_AT_HomeScreen_002@4b1c1ea0</td></tr>
+<tr>
+<td title='com.aajtak.android.HomeScreen.TC_AT_HomeScreen_003.AT_Home_003()'><b>AT_Home_003</b><br>Test class: com.aajtak.android.HomeScreen.TC_AT_HomeScreen_003<br>Test method: Description: Verify that each story has Comments icon, Bookmark icon, Offline Story icon and Share icon</td>
+<td></td>
+<td>25</td>
+<td>com.aajtak.android.HomeScreen.TC_AT_HomeScreen_003@17579e0f</td></tr>
+<tr>
+<td title='com.aajtak.android.HomeScreen.TC_AT_HomeScreen_004.AT_Home_004()'><b>AT_Home_004</b><br>Test class: com.aajtak.android.HomeScreen.TC_AT_HomeScreen_004<br>Test method: Description: Verify that each story under 'Badi Khabarae' is showing up the uploaded time</td>
+<td></td>
+<td>29</td>
+<td>com.aajtak.android.HomeScreen.TC_AT_HomeScreen_004@4d41cee</td></tr>
+<tr>
+<td title='com.aajtak.android.HomeScreen.TC_AT_HomeScreen_005.AT_Home_005()'><b>AT_Home_005</b><br>Test class: com.aajtak.android.HomeScreen.TC_AT_HomeScreen_005<br>Test method: Description: Verify that user is able to navigate to comments screen by tapping on 'Comments' icon below any story</td>
+<td></td>
+<td>37</td>
+<td>com.aajtak.android.HomeScreen.TC_AT_HomeScreen_005@3712b94</td></tr>
+<tr>
+<td title='com.aajtak.android.HomeScreen.TC_AT_HomeScreen_013.AT_Home_013()'><b>AT_Home_013</b><br>Test class: com.aajtak.android.HomeScreen.TC_AT_HomeScreen_013<br>Test method: Description: Verify that when user taps on 'Cancel' or any where on the screen in the anya share sheet, user navigates to 'Home' screen</td>
+<td></td>
+<td>33</td>
+<td>com.aajtak.android.HomeScreen.TC_AT_HomeScreen_013@2833cc44</td></tr>
+<tr>
+<td title='com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_001.AT_LiveTvWiget_001()'><b>AT_LiveTvWiget_001</b><br>Test class: com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_001<br>Test method: Description: Verify that the live tv is not cropped</td>
+<td></td>
+<td>26</td>
+<td>com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_001@1b68ddbd</td></tr>
+<tr>
+<td title='com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_002.AT_LiveTvWiget_002()'><b>AT_LiveTvWiget_002</b><br>Test class: com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_002<br>Test method: Description: Verify the mute icon</td>
+<td></td>
+<td>29</td>
+<td>com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_002@646d64ab</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_007.AT_Newslist_007()'><b>AT_Newslist_007</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_007<br>Test method: Description: Verify that user is able to view the bookmarked story is available in 'Bookmark' tab</td>
+<td></td>
+<td>72</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_007@2d8f65a4</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_009.AT_Newslist_009()'><b>AT_Newslist_009</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_009<br>Test method: Description: Verify that user is able to remove the added 'Bookmark' by tapping on the 'Bookmark' icon of bookmarked story</td>
+<td></td>
+<td>40</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_009@536aaa8d</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_011.AT_Newslist_011()'><b>AT_Newslist_011</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_011<br>Test method: Description: Verify that once the user taps on 'Cancel' from the sharing options, user navigates to Newslist screen</td>
+<td></td>
+<td>33</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_011@1f57539</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_012.AT_Newslist_012()'><b>AT_Newslist_012</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_012<br>Test method: Description: Verify that user is able to view more options to share the story when user taps on'Anya'share option</td>
+<td></td>
+<td>36</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_012@76f2b07d</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_013.AT_Newslist_013()'><b>AT_Newslist_013</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_013<br>Test method: Description: Verify that user is navigated to Newslist screen when user taps on 'Cancel' or any where on the screen</td>
+<td></td>
+<td>32</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_013@704a52ec</td></tr>
+<tr>
+<td title='com.aajtak.android.NewsList.TC_AT_NewsList_015.AT_Newslist_015()'><b>AT_Newslist_015</b><br>Test class: com.aajtak.android.NewsList.TC_AT_NewsList_015<br>Test method: Description: Verify that once user swipes the Newslist screen from top to bottom on home screen, Newslist screen gets refreshed</td>
+<td></td>
+<td>12</td>
+<td>com.aajtak.android.NewsList.TC_AT_NewsList_015@4493d195</td></tr>
+<tr>
+<td title='com.aajtak.android.NonFunctional.TC_AT_NonFuntional_002.AT_NonFunctional_002()'><b>AT_NonFunctional_002</b><br>Test class: com.aajtak.android.NonFunctional.TC_AT_NonFuntional_002<br>Test method: Description: Verify that the user is able to view splash screen</td>
+<td></td>
+<td>11</td>
+<td>com.aajtak.android.NonFunctional.TC_AT_NonFuntional_002@1786dec2</td></tr>
+<tr>
+<td title='com.aajtak.android.Onboarding.TC_AT_Onboarding_002.AT_Onboarding_002()'><b>AT_Onboarding_002</b><br>Test class: com.aajtak.android.Onboarding.TC_AT_Onboarding_002<br>Test method: Description: Verify that the user get navigated to Settings screen when user taps on Anya settings link</td>
+<td></td>
+<td>29</td>
+<td>com.aajtak.android.Onboarding.TC_AT_Onboarding_002@74650e52</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_001.AT_StoryDetail_001()'><b>AT_StoryDetail_001</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_001<br>Test method: Description : Verify that user is navigate to the story detail screen when user taps on a story</td>
+<td></td>
+<td>20</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_001@2781e022</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_002.AT_StoryDetail_002()'><b>AT_StoryDetail_002</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_002<br>Test method: Description : Verify that user should be able view the time of updation of the story</td>
+<td></td>
+<td>68</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_002@57e1b0c</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_003.AT_StoryDetail_003()'><b>AT_StoryDetail_003</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_003<br>Test method:  Description : Verify that user is able to view the below options on the Action overflow button: Comments icon, Bookmark icon, Offline Story icon, Text size and Share icon</td>
+<td></td>
+<td>29</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_003@4232c52b</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_004.AT_StoryDetail_004()'><b>AT_StoryDetail_004</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_004<br>Test method: Description : Verify that user is able to navigate to comments screen by tapping on 'Comments' icon</td>
+<td></td>
+<td>28</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_004@1877ab81</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_007.AT_StoryDetail_007()'><b>AT_StoryDetail_007</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_007<br>Test method: Description : Verify that by tapping on the close button of the 'Comment' screen</td>
+<td></td>
+<td>71</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_007@305fd85d</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_008.AT_StoryDetail_008()'><b>AT_StoryDetail_008</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_008<br>Test method: Description : Verify that user is able to tap 'Bookmark' icon</td>
+<td></td>
+<td>75</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_008@458c1321</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_010.AT_StoryDetail_010()'><b>AT_StoryDetail_010</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_010<br>Test method: Description : Verify that user is able to remove the added 'Bookmark' by tapping on the 'Bookmark' icon of bookmarked story</td>
+<td></td>
+<td>75</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_010@34cd072c</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_011.AT_StoryDetail_011()'><b>AT_StoryDetail_011</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_011<br>Test method: Description : Verify that user is able to tap 'Offline Story' icon</td>
+<td></td>
+<td>65</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_011@7a1ebcd8</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_017.AT_StoryDetail_017()'><b>AT_StoryDetail_017</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_017<br>Test method: Description : Verify that the user is able to swipe through the Article</td>
+<td></td>
+<td>60</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_017@5faeada1</td></tr>
+<tr>
+<td title='com.aajtak.android.StoryDetails.TC_AT_StoryDetail_018.AT_StoryDetail_018()'><b>AT_StoryDetail_018</b><br>Test class: com.aajtak.android.StoryDetails.TC_AT_StoryDetail_018<br>Test method: Verify that the user is able to play the embedded videos in the story detail screen</td>
+<td></td>
+<td>55</td>
+<td>com.aajtak.android.StoryDetails.TC_AT_StoryDetail_018@3b088d51</td></tr>
+</table><p>
+</body>
+</html>

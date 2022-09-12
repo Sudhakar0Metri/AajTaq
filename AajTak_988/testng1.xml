@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="1" configfailurepolicy="continue" name="Aajtak">
+	<listeners>
+		<listener class-name="com.aajtak.android.listener.MyExtentListners" />
+	</listeners>
+	<test thread-count="1" name="Aajtak_Test1">
+		<classes>
+			
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_018" />
+			<class name="com.aajtak.android.NonFunctional.TC_AT_NonFuntional_002" />
+			<class name="com.aajtak.android.Onboarding.TC_AT_Onboarding_002" />
+			<class name="com.aajtak.android.Onboarding.TC_AT_Onboarding_003" />
+			<class name="com.aajtak.android.HomeScreen.TC_AT_HomeScreen_001" />
+			<class name="com.aajtak.android.HomeScreen.TC_AT_HomeScreen_002" />
+			<class name="com.aajtak.android.HomeScreen.TC_AT_HomeScreen_003" />
+			<class name="com.aajtak.android.HomeScreen.TC_AT_HomeScreen_004" />
+			<class name="com.aajtak.android.HomeScreen.TC_AT_HomeScreen_005" />
+			<class name="com.aajtak.android.HomeScreen.TC_AT_HomeScreen_013" />
+			<class name="com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_019" />
+			<class name="com.aajtak.android.DailyCapsule.TC_AT_DailyCapsule_020" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_007" />
+			<class name="com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_001" />
+			<class name="com.aajtak.android.LiveTvWidget.TC_AT_LiveTvWiget_002" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_008" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_009" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_010" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_011" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_012" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_013" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_014" />
+			<class name="com.aajtak.android.NewsList.TC_AT_NewsList_015" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_001" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_002" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_003" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_004" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_007" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_008" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_010" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_011" />
+			<class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_017" />
+									
+			
+			
+		</classes>
+	</test> <!-- Aajtak_Test1 -->
+</suite> <!-- Aajtak -->

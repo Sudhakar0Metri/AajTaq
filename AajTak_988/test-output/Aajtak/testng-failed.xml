@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [Aajtak]">
+  <listeners>
+    <listener class-name="com.aajtak.android.listener.MyExtentListners"/>
+  </listeners>
+  <test thread-count="1" name="Aajtak_Test1(failed)">
+    <classes>
+      <class name="com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009">
+        <methods>
+          <include name="fileConfiguration"/>
+          <include name="loadLog4j"/>
+          <include name="AT_StoryDetail_009"/>
+          <include name="startServer"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.aajtak.android.StoryDetails.TC_AT_StoryDetail_009 -->
+      <class name="com.aajtak.android.NewsList.TC_AT_NewsList_014">
+        <methods>
+          <include name="fileConfiguration"/>
+          <include name="loadLog4j"/>
+          <include name="startServer"/>
+          <include name="setUp"/>
+          <include name="AT_Newslist_014"/>
+        </methods>
+      </class> <!-- com.aajtak.android.NewsList.TC_AT_NewsList_014 -->
+      <class name="com.aajtak.android.NewsList.TC_AT_NewsList_008">
+        <methods>
+          <include name="fileConfiguration"/>
+          <include name="loadLog4j"/>
+          <include name="AT_Newslist_008"/>
+          <include name="startServer"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.aajtak.android.NewsList.TC_AT_NewsList_008 -->
+      <class name="com.aajtak.android.Onboarding.TC_AT_Onboarding_003">
+        <methods>
+          <include name="fileConfiguration"/>
+          <include name="loadLog4j"/>
+          <include name="startServer"/>
+          <include name="setUp"/>
+          <include name="AT_Onboarding_003"/>
+        </methods>
+      </class> <!-- com.aajtak.android.Onboarding.TC_AT_Onboarding_003 -->
+      <class name="com.aajtak.android.NewsList.TC_AT_NewsList_010">
+        <methods>
+          <include name="fileConfiguration"/>
+          <include name="loadLog4j"/>
+          <include name="startServer"/>
+          <include name="setUp"/>
+          <include name="AT_Newslist_010"/>
+        </methods>
+      </class> <!-- com.aajtak.android.NewsList.TC_AT_NewsList_010 -->
+    </classes>
+  </test> <!-- Aajtak_Test1(failed) -->
+</suite> <!-- Failed suite [Aajtak] -->
