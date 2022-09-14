@@ -11,18 +11,19 @@ public class TC_AT_Photo_002 extends Aajtak_app_Util {
 	
 	                /* Test case- 295 */
 
-	@Test(description = "Verify the user is able to navigate to photo list screen from the Hamburger menu")
+	@Test(priority = 35,description = "Verify the user is able to navigate to photo list screen from the Hamburger menu")
 	public void AT_Photo_002() throws Exception {
 		/* Launch The APP */
 		
 		 launchApp();
-		Aajtak_app_Util.compelteOnboarding();
+		//Aajtak_app_Util.compelteOnboarding();
+		 compelteOnboardingCopy();
 		//reOpenApp();
 		
 		/* wait for HomeScreen to load & Tap on Hamburger */
-		waitTillElementPresent(homescreen.getHamburgerIcon(), 10);
-		isElementExist(homescreen.getHamburgerIcon(), "Hambergur Menu");
-		clickBtn(homescreen.getHamburgerIcon(), "Hambergur Menu");
+		waitTillElementPresent(homescreen.getHamburgerIconCopy(), 10);
+		isElementExist(homescreen.getHamburgerIconCopy(), "Hambergur Menu");
+		clickBtn(homescreen.getHamburgerIconCopy(), "Hambergur Menu");
 		
 		/* get PhotoList text and then Tap on it */
 		String hamburgerSection = photoList.getPhotoListFromHambergurMenu().getText();
@@ -31,7 +32,8 @@ public class TC_AT_Photo_002 extends Aajtak_app_Util {
 		/* Is Element photo section, Photo count, photo gallery exist */
 		String horizontalSection = photoList.getPhotoSectionFromHorizontalMenu().getText();
 		isElementExist(photoList.getPhotoSectionFromHorizontalMenu());
-		isElementExist(photoList.getphotoCount(),"Photo count");
+		
+		//isElementExist(photoList.getphotoCount(),"Photo count");
 		isElementExist(photoDetail.getPhotoGalleryScreen(), "Photo Gallery Screen");
 		
 		/* Validate */
